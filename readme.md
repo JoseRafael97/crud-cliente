@@ -1,2 +1,2 @@
-## Crud PHP 7 Clientes com Laravel 5.3 (example)
+## Crud PHP 7 customer with Laravel 5.3 (example)
 
