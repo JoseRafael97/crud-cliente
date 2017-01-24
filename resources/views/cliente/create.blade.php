@@ -2,8 +2,8 @@
 
 @section('content')
 
-    <h1>Adicionar novo Cliente</h1>
-    <p class="lead">Adiciona a lista de clientes.</p>
+    <h1>ADD NEW CUSTOMER</h1>
+    <p class="lead">Add in list of customers.</p>
     <hr>
 
     <!-- @if (count($errors) > 0)
@@ -14,7 +14,8 @@
                 </ul>
               @endif -->
 
-    <form class="" action="/clientes" method="post">
+ {!! Form::open(['url' => '/clientes',  'id' => 'form']) !!}
+
         <input class="form-control" type="text" name="nome" value="" placeholder="Nome">
         {{ ($errors->has('nome')) ? $errors->first('nome') : '' }}
 
@@ -28,5 +29,5 @@
         <input class="btn btn-primary " type="submit" name="name" value="Cadastrar">
     </form>
     {{ Session::get('message') }}
-
+        {!! Form::close() !!}
 @stop

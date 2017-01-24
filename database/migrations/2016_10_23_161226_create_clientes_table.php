@@ -26,8 +26,6 @@ class CreateClientesTable extends Migration
             $table->softDeletes();
         });
 
-        Cliente::create(['nome'=>'Rafael', 'cpf'=> '013549405940']);
-
     }
 
 
