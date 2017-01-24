@@ -4,7 +4,7 @@ namespace SigAtelie\Http\Controllers;
 
 
 use Illuminate\Http\Request;
-use SigAtelie\Cliente;
+use SigAtelie\Entities\Customer;
 use SigAtelie\Http\Requests;
 
 class ClienteController extends Controller
@@ -13,7 +13,7 @@ class ClienteController extends Controller
 
     public function index()
     {
-        $clientes = Cliente::all();
+        $clientes = Customer::all();
 
         return view('cliente.index')->with("clientes", $clientes);
 
@@ -40,19 +40,14 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        // we will create validation function here
         $this->validate($request,[
             'nome'=> 'required',
         ]);
 
-        $cliente = new Cliente;
-        $cliente->nome = $request->nome;
-        $cliente->cpf = $request->cpf;
-        $cliente->datanascimento =$request->datanascimento;
-        // save all data
-        $cliente->save();
-        //redirect page after save data
-        return redirect('clientes')->with('message','Cliente atualizado');
+        $customer = new Customer;
+
+        $cliente->create($request->all());
+        return redirect('clientes')->with('message','Updated customer');
     }
 
 
