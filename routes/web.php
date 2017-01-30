@@ -27,3 +27,7 @@ Route::group(['middleware' => ['web']], function() {
     Route::resource('clientes', 'ClienteController');
 
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
