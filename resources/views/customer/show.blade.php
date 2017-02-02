@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-    <title>clientes</title>
+    <title>customers</title>
 
 
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css') }}">
@@ -11,7 +11,7 @@
 @extends('layouts.master')
 
 @section('content')
-    <h1>Lista de Clientes</h1>
+    <h1>Lit of Customers</h1>
 
     <table class="table table-striped">
         <thead>

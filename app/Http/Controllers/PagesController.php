@@ -11,6 +11,6 @@ class PagesController extends Controller
 
     public function home()
     {
-        return view('cliente.home');
+        return view('customer.home');
     }
 }

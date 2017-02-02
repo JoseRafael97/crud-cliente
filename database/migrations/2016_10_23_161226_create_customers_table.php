@@ -7,7 +7,7 @@ use Illuminate\Database\Migrations\Migration;
 use SigAtelie\Entities\Customer;
 
 
-class CreateClientesTable extends Migration
+class CreateCustomersTable extends Migration
 {
 
     /**
@@ -21,7 +21,7 @@ class CreateClientesTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('cpf')->nullable();
-            $table->date('datanascimento')->nullable();
+            $table->date('dateOfBirth')->nullable();
         });
 
     }

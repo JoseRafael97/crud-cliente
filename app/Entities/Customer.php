@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Model;
 class Customer extends Model
 {
 
-  protected $timestamps = false; 
+  public $timestamps = false;
 
   /**
    * The attributes that are mass assignable.
@@ -20,7 +20,7 @@ class Customer extends Model
    * @var array
    */
   protected $fillable = [
-      'name', 'cpf',dateOfBirth,
+      'name', 'cpf','dateOfBirth',
   ];
 
 

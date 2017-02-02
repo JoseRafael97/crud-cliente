@@ -34,10 +34,10 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('cliente.home') }}" >Dashboard</a>
+                    <a href="{{ route('customer.home') }}" >Dashboard</a>
                 </li>
                 <li>
-                    <a href="{{ route('clientes.index') }}">Clientes</a>
+                    <a href="{{ route('customers.index') }}">Customers</a>
                 </li>
 
             </ul>
